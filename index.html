@@ -23,9 +23,22 @@
 
 var text = ""
 function start() {
+
     var startamount = document.getElementById("starting").value
     var interestrate = document.getElementById("interestrate").value / 100
     var goalamount = document.getElementById("goal").value
+    if (startamount < 0 || startamount == 0) {
+        alert("Starting Amount Can't be negative or equaling zero!")
+        return -1
+    }
+    if (interestrate < 0 || interestrate == 0) {
+        alert("Interest Rate Can't be negative or equaling zero!")
+        return -1
+    }
+    if (goalamount < 0) {
+        alert("Goal amount can't be negative!")
+        return -1
+    }
     var x = parseInt(startamount)
     var prevamount = parseInt(startamount)
     
